@@ -5,11 +5,12 @@ import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import gilko.marcin.memory5.model.Nauka;
@@ -19,7 +20,9 @@ import gilko.marcin.memory5.service.BazaSlowekService;
 import gilko.marcin.memory5.service.NaukaService;
 import gilko.marcin.memory5.service.ZdanieService;
 
-@Controller
+
+@CrossOrigin(origins = "http://localhost:8081")
+@RestController
 public class NaukaController {
 	
 	@Autowired
