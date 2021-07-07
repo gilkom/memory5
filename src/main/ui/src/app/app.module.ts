@@ -6,11 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BazaSlowekComponent } from './components/baza-slowek/baza-slowek.component';
+import { StronaGlownaComponent } from './components/strona-glowna/strona-glowna.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BazaSlowekComponent
+    BazaSlowekComponent,
+    StronaGlownaComponent
   ],
   imports: [
     BrowserModule,
