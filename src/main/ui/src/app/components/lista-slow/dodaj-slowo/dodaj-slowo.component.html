@@ -1,0 +1,71 @@
+
+<div>
+    <h5 align="center">Dodaj nowe słowo:</h5>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="slowo">Słowo</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="slowo"
+                    required
+                    [(ngModel)]="slowo.slowo"
+                    name="slowo"
+                />
+            </div>
+            <div class="form-group">
+                <label for="tlumaczenie">Tłumaczenie</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="tlumaczenie"
+                    required
+                    [(ngModel)]="slowo.tlumaczenie"
+                    name="tlumaczenie"
+                />
+            </div>
+            <div class="form-group">
+                <label for="rodzaj">Rodzaj</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="rodzaj"
+                    required
+                    [(ngModel)]="slowo.rodzaj"
+                    name="rodzaj"
+                />
+            </div>
+            <div class="form-group">
+                <label for="dzwiek">Dźwięk</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="dzwiek"
+                    required
+                    [(ngModel)]="slowo.dzwiek"
+                    name="dzwiek"
+                />
+            </div>
+            <div class="form-group">
+                <label for="obraz">Obraz</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="obraz"
+                    required
+                    [(ngModel)]="slowo.obraz"
+                    name="obraz"
+                />
+            </div>
+            <br>
+            <button (click)="saveSlowo()" class="btn btn-success">Potwierdź</button>
+        </div>
+
+        <div *ngIf="submitted">
+            <h4>Słowo zostało dodane!</h4>
+            <button class="btn btn-success" (click)="newSlowo()">Dodaj kolejne</button>
+        </div>
+
+    </div>
+</div>
