@@ -1,26 +1,39 @@
-
-<div>
-  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
     <a class="navbar-brand mx-auto" href="#">Memory5!</a>
-  
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-  
-    <div class="collapse navbar-collapse navbar-nav mr-auto" id="navbarMenu">
-      <div class="navbar-nav">
-            <a routerLink="glowna" class="nav-item nav-link active" >Strona główna</a>
-            <a class="nav-item nav-link" th:href="@{/nauka}">Nauka</a>
-            <a class="nav-item nav-link" href="/">Powtórki</a>
-            <a routerLink="slowka" class="nav-item nav-link">Baza słówek</a>
-            <a class="nav-item nav-link" href="#">Statystki</a>
-        </div>
-    </div>
-  </nav>
-
-  <div class="container mt-3">
-    <router-outlet></router-outlet>
   </div>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="glowna" class="nav-link active" >Strona główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" th:href="@{/nauka}">Nauka</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-item nav-link" href="/">Powtórki</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="slowka" class="nav-item nav-link">Baza słówek</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link" href="#">Statystki</a>
+      </li>
+      </ul>
+    </nav>
+
+  </div>
+
+</div>
+
+
+<div class="container mt-3">
+  <router-outlet></router-outlet>
 </div>
