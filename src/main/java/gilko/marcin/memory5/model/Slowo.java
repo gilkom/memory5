@@ -32,6 +32,14 @@ public class Slowo {
 		this.obraz = obraz;
 		
 	}
+	public Slowo(String slowo, String tlumaczenie, String rodzaj, String dzwiek, String obraz) {
+		this.slowo = slowo;
+		this.tlumaczenie = tlumaczenie;
+		this.rodzaj = rodzaj;
+		this.dzwiek = dzwiek;
+		this.obraz = obraz;
+		
+	}
 	
 	@Override
 	public String toString() {

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand mx-auto" href="#">Memory5!</a>
+    <a class="navbar-brand mx-auto" href="/glowna">Memory5!</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,8 +11,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a routerLink="glowna" class="nav-link active" >Strona główna</a>
+        <li role="nav-item">
+          <a class="nav-item nav-link" routerLink="glowna" routerLinkActive="active">Strona główna</a>
         </li>
         <li class="nav-item">
           <a class="nav-item nav-link" th:href="@{/nauka}">Nauka</a>
@@ -21,7 +21,7 @@
         <a class="nav-item nav-link" href="/">Powtórki</a>
       </li>
       <li class="nav-item">
-        <a routerLink="slowka" class="nav-item nav-link">Baza słówek</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="lista_slow" >Baza słówek</a>
       </li>
       <li class="nav-item">
         <a class="nav-item nav-link" href="#">Statystki</a>
@@ -34,6 +34,6 @@
 </div>
 
 
-<div class="container mt-3">
+
   <router-outlet></router-outlet>
-</div>
+
