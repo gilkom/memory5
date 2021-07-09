@@ -52,7 +52,7 @@ public class BazaSlowekController {
 			}else {
 				//dorobic
 			}
-			if(slowo.isEmpty()) {
+			if(slowa.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
 			return new ResponseEntity<>(slowa, HttpStatus.OK);
