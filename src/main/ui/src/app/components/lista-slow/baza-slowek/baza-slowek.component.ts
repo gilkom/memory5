@@ -9,6 +9,10 @@ import { Memory5Service } from 'src/app/services/memory5.service';
 })
 export class BazaSlowekComponent implements OnInit {
 
+  name = 'Angular';
+  
+  myVar: Slowo = {};
+
   slowa?: Slowo[];
   aktualneSlowo: Slowo = {};
   aktualnyIndex = -1;

@@ -87,9 +87,11 @@ public class Slowo {
 		this.dzwiek = dzwiek;
 	}
 	public String getObraz() {
-		String originalUrl = obraz;
-		String newUrl = originalUrl.replaceAll("file/d/", "uc?id=");
-		newUrl = originalUrl.replaceAll("/view?usp=sharing", "&export=open");
+		String newUrl = obraz;
+		
+		newUrl = newUrl.replace("file/d/", "uc?id=");
+		newUrl = newUrl.replace("/view?usp=sharing", "&export=open");
+		
 		return newUrl;
 	}
 	public void setObraz(String obraz) {

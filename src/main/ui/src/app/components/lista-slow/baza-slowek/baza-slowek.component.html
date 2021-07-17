@@ -19,7 +19,8 @@
         </div>
     </div>
     <div class="col-md-6">
-        <h4>Lista słów</h4>
+        <h4>Lista słów:</h4>
+        <div class="overfl">
         <ul class="list-group">
             <li
                 class="list-group-item"
@@ -30,5 +31,46 @@
                 {{ slowo.slowo}}
             </li>
         </ul>
+        </div>
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllSlowa()">
+            Usuń wszystkie
+        </button>
     </div>
+    <div class="col-md-6">
+       <div *ngIf="aktualneSlowo.id_slowa; else infoText">
+           <h4>Szczegóły:</h4>
+           <button type="button" class="btn btn-warning" routerLink="/baza_slowek/{{aktualneSlowo.id_slowa }}">
+                Edytuj
+            </button>
+           <div>
+               <label><strong>Słowo: </strong></label> {{ aktualneSlowo.slowo }}
+           </div>
+           <div>
+               <label><strong>Tłumaczenie: </strong></label> {{ aktualneSlowo.tlumaczenie }}
+           </div>
+           <div>
+            <label><strong>Rodzaj: </strong></label> {{ aktualneSlowo.rodzaj }}
+            </div>
+            <div>
+                <label><strong>Dzwięk: </strong></label> {{ aktualneSlowo.dzwiek }}
+            </div>
+            <div>
+                <label><strong>Obraz: </strong></label> {{ aktualneSlowo.obraz }}
+            </div>
+            <span class="pull-right">
+                <img
+                    [src]="aktualneSlowo.obraz"
+                    alt="{{aktualneSlowo.slowo}}"
+                    class="img-responsive"
+                    style="max-height: 200px;">
+            </span>
+            
+       </div>
+       <ng-template #infoText>
+        <h4>Szczegóły:</h4>
+        <br/>
+        <p>Wybierz słowo ...</p>   
+       </ng-template>
+    </div>
+    
 </div>
